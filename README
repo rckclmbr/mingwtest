@@ -1,0 +1,3 @@
+A test repo for cross-compiling libspotify for windows
+
+Install Docker and run ./run.sh

@@ -1,0 +1,10 @@
+prefix=/libspotify
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libspotify
+Description: Spotify client library
+Version: 12.1.51
+Libs: -L${libdir} -llibspotify
+Cflags: -I${includedir}
