@@ -1,10 +1,13 @@
 package main
 
-import (
-    "fmt"
-    _ "github.com/op/go-libspotify/spotify"
-)
+/*
+#cgo pkg-config: libspotify
+#include <libspotify/api.h>
+*/
+import "C"
+import "fmt"
 
 func main() {
-    fmt.Println("Compiled fine")
+    err := C.sp_error(C.SP_ERROR_BAD_API_VERSION)
+    fmt.Printf("Spotify error: %s\n", C.sp_error_message(err));
 }
