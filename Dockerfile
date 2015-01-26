@@ -6,7 +6,8 @@ RUN apt-get update; \
 # Install libspotify for win32
 RUN mkdir -p /libspotify; \
     curl -s "https://developer.spotify.com/download/libspotify/libspotify-12.1.51-win32-release.zip" > libspotify.zip; \
-    unzip -d /libspotify/ libspotify.zip
+    unzip -d /libspotify/ libspotify.zip; \
+    mv /libspotify/lib/libspotify.lib /libspotify/lib/spotify.lib
 ADD libspotify.pc /usr/local/lib/pkgconfig-mingw/libspotify.pc
 
 ENV CGO_ENABLED=1
