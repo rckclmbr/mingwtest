@@ -1,7 +1,8 @@
 package main
 
 /*
-#cgo pkg-config: libspotify
+#cgo CFLAGS: -I /libspotify/include
+#cgo LDFLAGS: /libspotify/lib/libspotify.lib
 #include <libspotify/api.h>
 */
 import "C"
